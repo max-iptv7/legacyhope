@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Police Application - Legacy Hope RP</title>
+    <meta name="description" content="Apply to join the Legacy Hope RP Police Department">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Rajdhani:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Snow Container -->
+    <div id="snow-container"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="https://images-ext-1.discordapp.net/external/XOzHDlC-30H7uEhT_jgpE6qucjbPXIinELdYdfZ_gAg/https/r2.fivemanage.com/xtTJr37GPiQTBRLqvFUCm/lh.png?format=webp&quality=lossless&width=1050&height=1050"
+                    alt="Logo">
+                <span>Legacy Hope</span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Back to Home</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href="https://www.youtube.com/@legacyhoperp" target="_blank" class="btn-youtube"><i
+                        class="fa-brands fa-youtube"></i></a>
+                <a href="https://discord.gg/" target="_blank" class="btn-discord"><i class="fa-brands fa-discord"></i>
+                    Join Discord</a>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Police Application Section -->
+    <section class="section police-section" style="padding-top: 150px; min-height: 100vh;">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Police Application</h2>
+                <div class="line"></div>
+                <p style="color: #aaa; margin-top: 20px;">Join the Legacy Hope Police Department</p>
+            </div>
+            <div class="whitelist-form-container" data-aos="zoom-in">
+                <form id="policeForm">
+                    <div class="form-group">
+                        <label for="policeName">Your Name</label>
+                        <input type="text" id="policeName" name="policeName" required placeholder="Your Full Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="policeAge">Age</label>
+                        <input type="number" id="policeAge" name="policeAge" required placeholder="Your Real Age">
+                    </div>
+                    <div class="form-group">
+                        <label for="policeDiscordId">Discord ID</label>
+                        <input type="text" id="policeDiscordId" name="policeDiscordId" required
+                            placeholder="Your Discord User ID">
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="whyJoin">Why do you want to join Legacy Police?</label>
+                        <textarea id="whyJoin" name="whyJoin" rows="4" required
+                            placeholder="Tell us why you want to be part of our police force..."></textarea>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="experience">Previous Police Experience</label>
+                        <textarea id="experience" name="experience" rows="3" required
+                            placeholder="Describe any previous police or law enforcement RP experience..."></textarea>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="availability">Availability</label>
+                        <textarea id="availability" name="availability" rows="2" required
+                            placeholder="When are you usually available to play? (Days/Hours)"></textarea>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="scenario">Scenario Response</label>
+                        <textarea id="scenario" name="scenario" rows="4" required
+                            placeholder="How would you handle a robbery in progress with hostages?"></textarea>
+                    </div>
+                    <div class="form-group full-width">
+                        <button type="submit" class="btn-primary">Submit Application <i
+                                class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <img src="https://images-ext-1.discordapp.net/external/XOzHDlC-30H7uEhT_jgpE6qucjbPXIinELdYdfZ_gAg/https/r2.fivemanage.com/xtTJr37GPiQTBRLqvFUCm/lh.png?format=webp&quality=lossless&width=1050&height=1050"
+                    alt="Logo">
+                <h3>Legacy Hope RP</h3>
+            </div>
+            <p>Join the Discord to stay updated.</p>
+            <div class="social-links">
+                <a href="https://discord.gg/" target="_blank"><i class="fa-brands fa-discord"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <p class="copyright">&copy; 2025 Legacy Hope RP. All rights reserved. <br> <span class="dev-credit">Dev:
+                    ayoub | Owner: !Sl3H</span></p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
