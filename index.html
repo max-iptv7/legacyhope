@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legacy Hope RP - V2</title>
+    <meta name="description"
+        content="Join Legacy Hope RP, the premier FiveM server. High FPS, Custom Scripts, and Serious RP.">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Rajdhani:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader-content">
+            <img src="https://images-ext-1.discordapp.net/external/XOzHDlC-30H7uEhT_jgpE6qucjbPXIinELdYdfZ_gAg/https/r2.fivemanage.com/xtTJr37GPiQTBRLqvFUCm/lh.png?format=webp&quality=lossless&width=1050&height=1050"
+                alt="Loading...">
+            <div class="loading-text glitch" data-text="LOADING...">LOADING...</div>
+            <div class="loading-bar">
+                <div class="bar-fill"></div>
+            </div>
+            <div class="loading-percentage">0%</div>
+        </div>
+    </div>
+
+    <!-- Snow Container -->
+    <div id="snow-container"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="https://images-ext-1.discordapp.net/external/XOzHDlC-30H7uEhT_jgpE6qucjbPXIinELdYdfZ_gAg/https/r2.fivemanage.com/xtTJr37GPiQTBRLqvFUCm/lh.png?format=webp&quality=lossless&width=1050&height=1050"
+                    alt="Logo">
+                <span>Legacy Hope</span>
+            </div>
+
+            <!-- Server Status Widget (Nav) -->
+            <div class="server-status">
+                <span class="status-dot"></span>
+                <span id="player-count">Loading...</span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#rules">Rules</a></li>
+                <li><a href="#whitelist">Whitelist</a></li>
+                <li><a href="#police">Police</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href="https://www.youtube.com/@legacyhoperp" target="_blank" class="btn-youtube"><i
+                        class="fa-brands fa-youtube"></i></a>
+                <a href="https://discord.gg/" target="_blank" class="btn-discord"><i class="fa-brands fa-discord"></i>
+                    Join Discord</a>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="hero-bg-wrapper">
+            <div class="hero-bg"></div> <!-- Background Image with Flow Effect -->
+        </div>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content" data-aos="zoom-in" data-aos-duration="1000">
+            <img class="hero-logo"
+                src="https://images-ext-1.discordapp.net/external/XOzHDlC-30H7uEhT_jgpE6qucjbPXIinELdYdfZ_gAg/https/r2.fivemanage.com/xtTJr37GPiQTBRLqvFUCm/lh.png?format=webp&quality=lossless&width=1050&height=1050"
+                alt="Legacy Hope RP">
+            <h1 class="glitch" data-text="Legacy Hope RP">Legacy Hope RP</h1>
+            <p class="subtitle">Enter the Simulation. Define Your Legacy.</p>
+            <div class="hero-buttons">
+                <a href="fivem://connect/rp.legacy-hope.de" class="btn-primary glitch-hover">Play Now <i
+                        class="fa-solid fa-play"></i></a>
+                <a href="https://discord.gg/eCTvCu7C" target="_blank" class="btn-secondary">Discord <i
+                        class="fa-brands fa-discord"></i></a>
+            </div>
+        </div>
+
+        <div class="scroll-down">
+            <i class="fa-solid fa-chevron-down"></i>
+        </div>
+    </header>
+
+    <!-- Video Section -->
+    <section class="section video-section" style="padding-bottom: 0;">
+        <div class="container" data-aos="fade-up">
+            <div class="video-container"
+                style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 15px; border: 2px solid var(--primary-color); box-shadow: 0 0 20px var(--primary-glow);">
+                <video id="hero-video"
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;" autoplay
+                    muted loop playsinline>
+                    <source src="video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button id="volume-toggle" class="volume-btn">
+                    <i class="fa-solid fa-volume-xmark"></i>
+                </button>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Why Choose Us?</h2>
+                <div class="line"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon-box"><i class="fa-solid fa-microchip"></i></div>
+                    <h3>Optimized Core</h3>
+                    <p>Custom framework ensuring high FPS and rigorous anti-cheat protection.</p>
+                </div>
+                <div class="about-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="icon-box"><i class="fa-solid fa-users"></i></div>
+                    <h3>Active Community</h3>
+                    <p>Friendly staff and active police/EMS departments ready for RP.</p>
+                </div>
+                <div class="about-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="icon-box"><i class="fa-solid fa-gem"></i></div>
+                    <h3>Exclusive Assets</h3>
+                    <p>Custom cars, clothing, and MLOs you won't find anywhere else.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet The Team Section -->
+    <section id="team" class="section team-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Meet The Team</h2>
+                <div class="line"></div>
+            </div>
+            <div class="team-grid">
+                <div class="team-card" data-aos="flip-left" data-aos-duration="1000">
+                    <div class="team-img">
+                        <img src="https://cdn.discordapp.com/avatars/318543034713112577/a_9b99df63fbc21f4d7435eda780d9742d.gif?size=1024&animated=true"
+                            alt="Owner">
+                    </div>
+                    <h3>!Sl3H</h3>
+                    <span class="role owner">Owner / Founder</span>
+                    <p>The visionary behind Legacy Hope RP.</p>
+                </div>
+                <div class="team-card" data-aos="flip-right" data-aos-duration="1000">
+                    <div class="team-img">
+                        <img src="https://cdn.discordapp.com/avatars/656266921519480838/91e9a1253d5105bc2c8e5173933abb18.webp?size=1024"
+                            alt="Developer">
+                    </div>
+                    <h3>ayoub</h3>
+                    <span class="role dev">Lead Developer</span>
+                    <p>Crafting the code that powers your experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rules Section -->
+    <section id="rules" class="section rules-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Server Rules</h2>
+                <div class="line"></div>
+            </div>
+            <div class="rules-container">
+                <!-- Basic Rules -->
+                <div class="rule-item" data-aos="fade-left">
+                    <div class="rule-header">
+                        <span>01</span>
+                        <h4>Basic Rules & Definitions</h4>
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <div class="rule-body">
+                        <div class="rules-content">
+                            <ol>
+                                <li><strong>OOC:</strong> l chat mech maj3oula chte5ou/ta3ti biha infos HRP!</li>
+                                <li><strong>RDM:</strong> Ma 3andekch el 7a9 to9tel Player men ghir sbab!</li>
+                                <li><strong>VDM:</strong> ma 3andekch el 7a9 testa3mel vehicle bech to9tel wala
+                                    tadhreb player</li>
+                                <li><strong>VOL:</strong> lezmek dima tkhaf 3la l character mte3ek w t9ader 7yetou!
+                                </li>
+                                <li><strong>Power Gaming:</strong> ma lezmekch tet9awa 3al character mte3ek:
+                                    <ul>
+                                        <li>Example: Accident wela Tnagaz men blasa 3alya w tetwaja3ch</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Meta Gaming:</strong> ma 3andekch el 7a9 testa3mel info makech makhedhha
+                                    in game w kol info lazemha record snn meta!</li>
+                                <li><strong>Fail RP:</strong> ma 3andekch el 7a9 ta3mel 7aja moch ma39oula w
+                                    matemchich m3a character mte3ek!</li>
+                                <li><strong>Force RP:</strong> ma 3andekch el 7a9 tet9awa 3la player bech tekhou
+                                    advantage fi scene
+                                    <ul>
+                                        <li>Example: tfok info wela flous bl force</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Win RP:</strong> ma 3andekch el 7a9 tekhtare3 7ajet moch mawjoudin in
+                                    game bech terba7 bihom scene</li>
+                                <li><strong>Combat Logging:</strong> tleave l game wela ta3mal rou7ek afk fi west
+                                    scene</li>
+                                <li><strong>Combat Storing:</strong> ma 3andekch el 7a9 tohreb l greenzone fi west
+                                    scene (5alet 3lik chkoun wela fi fight)</li>
+                                <li><strong>Clear Shot:</strong> famammech 7aja esmha clear shot fel RP ki yebda
+                                    famma hostage</li>
+                                <li><strong>Revenge kill:</strong> Ken makech f gang lazmek record & info rp & 2h
+                                    bech tnajam ta3mal revenge!</li>
+                                <li><strong>Disrespect / Toxicity:</strong> Interdit tetmanyak 3ala player w houwa
+                                    taye7 (la b emote w la b klem)!</li>
+                                <li><strong>Use Rule:</strong> tcouveri rou7ek b rule f scene
+                                    <ul>
+                                        <li>Example: teprovoqui chkoun fi greenzone khater ta3ref maynajamch
+                                            ya3malek chy</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Pain RP:</strong> ki tetdhrab wala ta3mel accident wala 3amaliya lezmek
+                                    tetwaja3 w tetasarref kima IRL</li>
+                                <li>Kofr rabbi bannable 7atta lawken bin las7ab ama saben ay 7ad mel 3ila bannable
+                                    ken wsel fama report</li>
+                                <li>Abusing any glitch or finding one and not reporting it to the staff will result
+                                    in a Permanent ban</li>
+                                <li>Using any kind of third party cheats / mods that give you advantage visually
+                                    will result in a Permanent ban</li>
+                                <li>Any kind of sexual abuse or ra**ping scenes will result in an extremely severe
+                                    sanction</li>
+                                <li>Skipping a scene with an EMS, Police or lawyer will result in a ban</li>
+                                <li>You must choose a realistic name otherwise you character will get deleted</li>
+                                <li>Third party or free loot are not allowed</li>
+                                <li>Ki tebda boss mta3 faction wala charika w to93od inactif 7 days yetna7alek l
+                                    boss</li>
+                                <li>Mamnou3 tkhalli 7aja men amlekek l player ekhor ki bech tsirlek mort rp</li>
+                                <li>Ki tsirlek mort rp characterek jdid lezem ykoun ma 3andou 7atta 3ale9a bel
+                                    character l 9dim</li>
+                                <li>Ken 7ad faila m3ak tkammel scene w treporti fellekher (tnajam treporti meloul
+                                    ama lazem tekteb "spectate")</li>
+                                <li>Ay refund lazmou record</li>
+                                <li>Interdit tib9a b dbach il khedma wenti off duty</li>
+                                <li><strong>/me:</strong> used to describe a feeling</li>
+                                <li><strong>/do:</strong> used to describe an action</li>
+                            </ol>
+                            <div class="rules-note">
+                                <p><i class="fa-solid fa-circle-info"></i> Ki ta9ra w tefhem rules heky 7aja t5alik
+                                    tel3ab RP ndhif w ta7mi rouhek ml 3bed elli tfaili!</p>
+                                <p><i class="fa-solid fa-circle-question"></i> Ken Makech fahem 7aja fl rules tnajam
+                                    temchi l waiting for help w nfasroulek l rules!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Police Rules -->
+                <div class="rule-item" data-aos="fade-left" data-aos-delay="100">
+                    <div class="rule-header">
+                        <span>02</span>
+                        <h4>Police Rules</h4>
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <div class="rule-body">
+                        <div class="rules-content">
+                            <ol>
+                                <li>Mamnou3 b ay chakl ml achkel tkoun police fased !!
+                                    <ul>
+                                        <li>Example: ta3ti wela tbi3 ma7jouz etc..</li>
+                                    </ul>
+                                </li>
+                                <li>Mamnou3 alik tb9a off duty akther men 2 hours maghir mate3lem l chief!</li>
+                                <li>MDT lazem t9ayad fiha kol chay w interdit tna7i ay 7aja maghir order !!</li>
+                                <li>Ma tb3ath 7ad lel 7abs ken ba3d matkmel scenek kemla m3ah!</li>
+                                <li>Descente yelzem minimum 10 effective + record + te3lemhom 9ball 24h!</li>
+                                <li><strong>Suspicious Vehicles:</strong> Kif t9ol "karhba masrou9a": Mamnou3 3lik
+                                    tkon mkch mbalegh 3liha</li>
+                                <li><strong>Third Party Gang Fights:</strong> Police manmoun3 alih yeda5l fi fight
+                                    (third party) ken matoufa l fight!</li>
+                                <li><strong>RP Quality:</strong> interdit police w ta3mal f troll!</li>
+                                <li>Yelzmek tesma3 klem l grade elli a3la menek!</li>
+                                <li><strong>Resignation:</strong> ken gradek fou9 +5 matnajamch to5rej ken b mort
+                                    RP! ken a9al lazem 600 Malyoun!</li>
+                                <li><strong>Inactivity:</strong> offline akthar men 5 days maghir mate3lem tnajam
+                                    tousel l mort rp (out of police)!</li>
+                                <li><strong>Forcing:</strong> Mamnou3 tlaffa9 9adhiya wala tforsi wa7ed ya3tik info
+                                    Tnajjem ta3mel deal!</li>
+                                <li>tnajamch tna9as fl jail duration ella b confirmation mel high grade!</li>
+                                <li><strong>Searching Players:</strong> Tfarakes player ken fel markaz wela sbitar
+                                    blasa o5ra mamnou3!</li>
+                                <li><strong>EMS Respect:</strong> Dima 7ot f balek elli l ems are partners!</li>
+                                <li>Interdit troll / rage fl radio!</li>
+                                <li><strong>Halet tawre2:</strong> fi halet tawr2 interdit tfarkes mouwten blech
+                                    mask</li>
+                                <li><strong>Annonce police:</strong> mamnou3 yhbt annonce mouch high grade wela
+                                    bordre mand commandant</li>
+                                <li>Mamnou3 police yaml accident fi poursuite yklm ylzmou yns7eb</li>
+                                <li>poursuite tnajam tkartech ken mba3ed 15 min!</li>
+                            </ol>
+                            <div class="rules-note">
+                                <p><i class="fa-solid fa-circle-info"></i> Ki ta9ra w tefhem rules heky 7aja t5alik
+                                    tel3ab RP ndhif w ta7mi rouhek ml 3bed elli tfaili!</p>
+                                <p><i class="fa-solid fa-circle-question"></i> Ken Makech fahem 7aja fl rules tnajam
+                                    temchi l waiting for help w nfasroulek l rules!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Illegal Rules -->
+                <div class="rule-item" data-aos="fade-left" data-aos-delay="200">
+                    <div class="rule-header">
+                        <span>03</span>
+                        <h4>Illegal Rules</h4>
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <div class="rule-body">
+                        <div class="rules-content">
+                            <ol>
+                                <li>Ma 3andekch el 7a9 ta3mel robberys wa9et tebde fama halet taware2 wela green
+                                    time</li>
+                                <li>ATM / Store robbery, lazem testana 5min majakesh l police tnajam tohreb</li>
+                                <li>Rahina maj3oula lel robberies wela bech tmana3 l boss mta3ek!</li>
+                                <li>Braquage without reason interdit</li>
+                                <li>Interdit 3lik ta3mel medium / large robbery b sle7 abyedh</li>
+                                <li>ki ta5taf player 3andekch l7a9 tab9a 5atfou akthar men 15 min (kounchi
+                                    autorisation mn admin)</li>
+                                <li>Mamnou3 3lik testa3mel hélicoptère fi small robbery</li>
+                                <li>Minimum criminals fi scene braquage 2 (weapon required)</li>
+                                <li>Police tanjem tlootih ken fl ma7jouz interdit 3lik thez 7ajet okhra</li>
+                                <li>Matnajemch ta5tef mouwaten fy wost el khedma w ella labes dbach el 5edma</li>
+                                <li>Interdit ta3mal fight maghir mask w ki ta3mal illegal matnajam tna7i l mask ken
+                                    mba3ed 10 min meli toufa l scene!</li>
+                                <li>Record Obligatoir fii ay scene illegal</li>
+                                <li>Bin l robbery wl robbery lazem testana 15 min (fl meduim & high robberies
+                                    testana 1h)</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gang Rules -->
+                <div class="rule-item" data-aos="fade-left" data-aos-delay="300">
+                    <div class="rule-header">
+                        <span>04</span>
+                        <h4>Gang Rules</h4>
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <div class="rule-body">
+                        <div class="rules-content">
+                            <ol>
+                                <li>Maximum Gang Members : 20 Male & unlimited for females</li>
+                                <li>No alliance between gangs</li>
+                                <li>F gang wela mouch f gang Fight without reason = cancel + ban</li>
+                                <li>gang f scene ta3mal akthar men 3 fails = gang strike (l boss lazem ya3raf ya5tar
+                                    l members)</li>
+                                <li>Interaction Obligatoire ! only redzones famech interaction</li>
+                                <li>Tnajam treacti f ay wa9t ama il se fait saret l react both gangs ma3atech
+                                    3andhom reason lel fight
+                                    <ul>
+                                        <li>NB: Ken member ml gang mta3ek 3mal l react w 9tal member ml gang lo5ra =
+                                            react tii7</li>
+                                    </ul>
+                                </li>
+                                <li>mamnou3 ay member men gang yelbess mask ta3 gang okhra</li>
+                                <li>interdit thez wahed min shabik rahhina ! fake hostage interdit</li>
+                                <li>kan mot fi fight wela react interdit alik tarja lil scene</li>
+                                <li>bech tbadel el Under boss mta3 el gang lezmek ta3lem el mafia</li>
+                                <li>ken member mel gang khraj wa7dou 3andek el 7a9 fel mort rp / ken ettared no mort
+                                    rp</li>
+                                <li>Interdit gangster ysob bl gang mte3ou wela bl mafia lel police (tnajam tsob b
+                                    gang o5ra ama tet7amal l mas2ouliya fl rp)</li>
+                                <li>Interdit gang ta8dar mafia (b ay tari9a) ella matetla3 cartel !!</li>
+                                <li>Interdit gang testa3mal mask mech mte3ha !!</li>
+                                <li>Fi Fight vs police lazem dima a9al b 2 (tenzel button home w tchouf 9adeh police
+                                    w tna9as)</li>
+                            </ol>
+                            <div class="rules-note">
+                                <p><i class="fa-solid fa-circle-info"></i> Ki ta9ra w tefhem rules heky 7aja t5alik
+                                    tel3ab RP ndhif w ta7mi rouhek ml 3bed elli tfaili!</p>
+                                <p><i class="fa-solid fa-circle-question"></i> Ken Makech fahem 7aja fl rules tnajam
+                                    temchi l waiting for help w nfasroulek l rules!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EMS Rules -->
+                <div class="rule-item" data-aos="fade-left" data-aos-delay="400">
+                    <div class="rule-header">
+                        <span>05</span>
+                        <h4>EMS Rules</h4>
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <div class="rule-body">
+                        <div class="rules-content">
+                            <ol>
+                                <li>Ki tebda off duty w low grade interdit testa3ml ems power!
+                                    <ul>
+                                        <li>Example : off duty w tfaya9 f s7abek!</li>
+                                    </ul>
+                                </li>
+                                <li>8ir l emotes l /do important bech t5ali RP mezyen!</li>
+                                <li>Ki yebda dead (not knocked) tnajam tfay9ou ken f sbitar!</li>
+                                <li>Tnajam tkoun EMS fi gang ama interdit ta3ti ems items!</li>
+                                <li>Interdit ysir disrespect bin l collegue!</li>
+                                <li>Interdit matesma3ch klem grade a3la menek!</li>
+                            </ol>
+                            <div class="rules-note">
+                                <p><i class="fa-solid fa-circle-info"></i> Ki ta9ra w tefhem rules heky 7aja t5alik
+                                    tel3ab RP ndhif w ta7mi rouhek ml 3bed elli tfaili!</p>
+                                <p><i class="fa-solid fa-circle-question"></i> Ken Makech fahem 7aja fl rules tnajam
+                                    temchi l waiting for help w nfasroulek l rules!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Business Rules -->
+                <div class="rule-item" data-aos="fade-left" data-aos-delay="500">
+                    <div class="rule-header">
+                        <span>06</span>
+                        <h4>Business Rules</h4>
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <div class="rule-body">
+                        <div class="rules-content">
+                            <ol>
+                                <li>Ki tebda boss charika lazem you act as a buisness man!</li>
+                                <li>Ki tebda boss mta3 faction wala charika w to93od inactif 7 days tetna7alek l
+                                    boss</li>
+                                <li>Mamnou3 tghalli wala trakhes fi aswem sel3tek</li>
+                                <li>Ki tebda on duty lazem dima labes labset l5edma!</li>
+                                <li>Interdit t7ot lflous f jibek lazem dima /bill (fatoura)</li>
+                            </ol>
+                            <div class="rules-note">
+                                <p><i class="fa-solid fa-circle-info"></i> Ki ta9ra w tefhem rules heky 7aja t5alik
+                                    tel3ab RP ndhif w ta7mi rouhek ml 3bed elli tfaili!</p>
+                                <p><i class="fa-solid fa-circle-question"></i> Ken Makech fahem 7aja fl rules tnajam
+                                    temchi l waiting for help w nfasroulek l rules!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Streamer Rules -->
+                <div class="rule-item" data-aos="fade-left" data-aos-delay="600">
+                    <div class="rule-header">
+                        <span>07</span>
+                        <h4>Streamer Rules</h4>
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <div class="rule-body">
+                        <div class="rules-content">
+                            <ol>
+                                <li>When you share your link lazem t7ot stream title LH RP or Legacy Hope!</li>
+                                <li>Interdit thabat link wenty tel3ab f server RP a5er!</li>
+                                <li>Ki tebda f situation lazem te3lem staff elli enti f west stream!</li>
+                                <li>Ken talbou menek staff ta3mal mute lel stream lazem tmuti!</li>
+                                <li>Interdit testa3mal infos m chat stream (meta)!</li>
+                                <li>No trolling fl live or unrealistic Roleplay!</li>
+                            </ol>
+                            <div class="rules-note">
+                                <p><i class="fa-solid fa-circle-info"></i> Ki ta9ra w tefhem rules heky 7aja t5alik
+                                    tel3ab RP ndhif w ta7mi rouhek ml 3bed elli tfaili!</p>
+                                <p><i class="fa-solid fa-circle-question"></i> Ken Makech fahem 7aja fl rules tnajam
+                                    temchi l waiting for help w nfasroulek l rules!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Whitelist Application Section -->
+    <section id="whitelist" class="section whitelist-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Whitelist App</h2>
+                <div class="line"></div>
+            </div>
+            <div class="whitelist-form-container" data-aos="zoom-in">
+                <form id="whitelistForm">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" required placeholder="Your In-Game Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" name="age" required placeholder="Your Real Age">
+                    </div>
+                    <div class="form-group">
+                        <label for="discordId">Discord ID</label>
+                        <input type="text" id="discordId" name="discordId" required placeholder="Your Discord User ID">
+                    </div>
+                    <div class="form-group">
+                        <label for="playedRp">Played RP Before?</label>
+                        <select id="playedRp" name="playedRp" required>
+                            <option value="" disabled selected>Select an option</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                    <div class="form-group hidden-field" id="previousServerGroup">
+                        <label for="previousServer">Where did you play?</label>
+                        <input type="text" id="previousServer" name="previousServer"
+                            placeholder="Server Name (e.g. Nopixel, GrandRP)">
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="importantRules">Most Important RP Rules</label>
+                        <textarea id="importantRules" name="importantRules" rows="3" required
+                            placeholder="List the most important rules..."></textarea>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="skipScene">Skip Scene + Example</label>
+                        <textarea id="skipScene" name="skipScene" rows="4" required
+                            placeholder="Explain what skip scene is and give an example..."></textarea>
+                    </div>
+                    <div class="form-group full-width">
+                        <button type="submit" class="btn-primary">Submit Application <i
+                                class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Police Application Section -->
+    <section id="police" class="section police-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Police Application</h2>
+                <div class="line"></div>
+            </div>
+            <div class="whitelist-form-container" data-aos="zoom-in">
+                <form id="policeForm">
+                    <div class="form-group">
+                        <label for="policeName">Your Name</label>
+                        <input type="text" id="policeName" name="policeName" required placeholder="Your Full Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="policeAge">Age</label>
+                        <input type="number" id="policeAge" name="policeAge" required placeholder="Your Real Age">
+                    </div>
+                    <div class="form-group">
+                        <label for="policeDiscordId">Discord ID</label>
+                        <input type="text" id="policeDiscordId" name="policeDiscordId" required
+                            placeholder="Your Discord User ID">
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="whyJoin">Why do you want to join Legacy Police?</label>
+                        <textarea id="whyJoin" name="whyJoin" rows="4" required
+                            placeholder="Tell us why you want to be part of our police force..."></textarea>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="experience">Previous Police Experience</label>
+                        <textarea id="experience" name="experience" rows="3" required
+                            placeholder="Describe any previous police or law enforcement RP experience..."></textarea>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="availability">Availability</label>
+                        <textarea id="availability" name="availability" rows="2" required
+                            placeholder="When are you usually available to play? (Days/Hours)"></textarea>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="scenario">Scenario Response</label>
+                        <textarea id="scenario" name="scenario" rows="4" required
+                            placeholder="How would you handle a robbery in progress with hostages?"></textarea>
+                    </div>
+                    <div class="form-group full-width">
+                        <button type="submit" class="btn-primary">Submit Application <i
+                                class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section gallery-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Gallery</h2>
+                <div class="line"></div>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-aos="zoom-in">
+                    <img src="gallery/gang1.png" alt="Gang Life">
+                    <div class="gallery-overlay">
+                        <h3>Gang Life</h3>
+                        <p>Street Culture</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="gallery/gang2.png" alt="Gang Activity">
+                    <div class="gallery-overlay">
+                        <h3>Gang Activity</h3>
+                        <p>Organized Crime</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="gallery/mecano.png" alt="Mechanic Shop">
+                    <div class="gallery-overlay">
+                        <h3>Mechanic Shop</h3>
+                        <p>Custom Repairs</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="gallery/news.png" alt="News Station">
+                    <div class="gallery-overlay">
+                        <h3>News Station</h3>
+                        <p>Breaking Stories</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="gallery/police1.png" alt="Police Force">
+                    <div class="gallery-overlay">
+                        <h3>Police Force</h3>
+                        <p>Protect & Serve</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <img src="https://images-ext-1.discordapp.net/external/XOzHDlC-30H7uEhT_jgpE6qucjbPXIinELdYdfZ_gAg/https/r2.fivemanage.com/xtTJr37GPiQTBRLqvFUCm/lh.png?format=webp&quality=lossless&width=1050&height=1050"
+                    alt="Logo">
+                <h3>Legacy Hope RP</h3>
+            </div>
+            <p>Join the Discord to stay updated.</p>
+            <div class="social-links">
+                <a href="https://discord.gg/" target="_blank"><i class="fa-brands fa-discord"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <p class="copyright">&copy; 2025 Legacy Hope RP. All rights reserved. <br> <span class="dev-credit">Dev:
+                    ayoub | Owner: !Sl3H</span></p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
